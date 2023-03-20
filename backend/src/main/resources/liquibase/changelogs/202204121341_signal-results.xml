@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <changeSet id="202204121341_signal-results" author="gabrieldebem">
+        <createTable tableName="signal_results">
+            <column name="id" type="INT(11)" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column name="created_at" type="TIMESTAMP">
+                <constraints nullable="false" />
+            </column>
+            <column name="comorbidities" type="boolean">
+                <constraints nullable="false" />
+            </column>
+            <column name="hrv_lfhf" type="DECIMAL(9,6)">
+                <constraints nullable="false" />
+            </column>
+            <column name="hrv_lnhf" type="DECIMAL(9,6)">
+                <constraints nullable="false" />
+            </column>
+            <column name="bpm" type="int">
+                <constraints nullable="false" />
+            </column>
+            <column name="gender_id" type="INT(11)">
+                <constraints nullable="true" />
+            </column>
+            <column name="age_group_id" type="INT(11)">
+                <constraints nullable="true" />
+            </column>
+
+            <!-- ADDED LATER, EXTRA RESULTS-->
+            <column name="HF" type="DECIMAL(9,6)">
+                <constraints nullable="false" />
+            </column>
+            <column name="LF" type="DECIMAL(9,6)">
+                <constraints nullable="false" />
+            </column>
+            <column name="SD1" type="DECIMAL(9,6)">
+                <constraints nullable="false" />
+            </column>
+            <column name="SD2" type="DECIMAL(9,6)">
+                <constraints nullable="false" />
+            </column>
+            <column name="SD1_SD2" type="DECIMAL(9,6)">
+                <constraints nullable="false" />
+            </column>
+
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

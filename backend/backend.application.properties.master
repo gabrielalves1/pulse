@@ -1,0 +1,14 @@
+###########################################
+#               Ambiente DEV
+###########################################
+spring.datasource.driver-class-name = org.mariadb.jdbc.Driver
+spring.datasource.url = jdbc:mariadb://mariadb:3306/pulse?createDatabaseIfNotExist=true&serverTimezone=UTC
+spring.datasource.username = cis_usr
+spring.datasource.password = ozrq}vxZ9p>zbZ*L+STZ*%
+
+spring.liquibase.change-log=classpath:liquibase/changelog.xml
+
+spring.jpa.show-sql=false
+spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5Dialect
+
+server.port = 8080

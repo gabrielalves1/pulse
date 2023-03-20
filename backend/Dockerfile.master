@@ -1,0 +1,21 @@
+FROM alpine:3.14
+
+RUN apk --update add openjdk11
+RUN apk add --no-cache mariadb mariadb-client
+RUN apk --update add mysql mysql-client
+RUN apk --update add git curl vim unzip wget
+
+RUN mkdir /config
+COPY backend.application.properties.master /config/backend.application.properties
+
+RUN mkdir /pulse
+WORKDIR /pulse
+COPY start.sh /pulse/
+RUN chmod +x start.sh
+COPY target/backend-1.0-SNAPSHOT.jar /pulse/
+
+VOLUME /config
+
+EXPOSE 8080
+
+CMD ["/pulse/start.sh"]

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pro="http://www.liquibase.org/xml/ns/pro" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd
+                        http://www.liquibase.org/xml/ns/pro 
+                        http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.1.xsd">
+
+    <include file="liquibase/changelogs/202204121341_signal-results.xml" />
+    <include file="liquibase/changelogs/202204121338_create-genders.xml" />
+    <include file="liquibase/changelogs/202204121339_create-age-group.xml" />
+    <include file="liquibase/changelogs/2023200320231324_create_companies.xml" />
+    <include file="liquibase/seed/202204121435_insert-genders.sql" />
+    <include file="liquibase/seed/202204121442_insert-age-group.sql" />
+
+</databaseChangeLog>
